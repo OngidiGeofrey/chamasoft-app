@@ -1,0 +1,86 @@
+<html>
+<head>
+    <title>DowLoad Chamasoft App</title>
+     <script type="text/javascript">
+     function  download_chamasoft()
+{
+
+   
+        var userAgent = window.navigator.userAgent,
+            platform = window.navigator?.userAgentData?.platform || window.navigator.platform,
+            macosPlatforms = ['Macintosh', 'MacIntel', 'MacPPC', 'Mac68K'],
+            windowsPlatforms = ['Win32', 'Win64', 'Windows', 'WinCE'],
+            iosPlatforms = ['iPhone', 'iPad', 'iPod'],
+            os = null;
+      
+        if (macosPlatforms.indexOf(platform) !== -1) {
+          os = 'Mac OS';
+          window.location.href = "https://chamasoft.com/technology/web-application/";
+        } 
+        else if (iosPlatforms.indexOf(platform) !== -1) {
+          os = 'iOS';
+          window.location.href = "https://apps.apple.com/ke/app/chamasoft/id1489712788";
+        } 
+        
+        else if (windowsPlatforms.indexOf(platform) !== -1) {
+          os = 'Windows';
+          window.location.href = "https://chamasoft.com/technology/web-application/";
+        }
+        
+        else if (/Android/.test(userAgent)) {
+          os = 'Android';
+
+          window.location.href = "https://play.google.com/store/apps/details?id=chamasoft.app"; 
+
+        } 
+        else if (/Linux/.test(platform)) {
+          os = 'Linux';
+          window.location.href = "https://chamasoft.com/technology/web-application/";
+        }
+  // document.getElementById('OS').innerHTML = os;
+
+}
+
+window.onload = download_chamasoft;
+        
+    </script>
+
+<style>
+.loader {
+  border: 4px solid #f3f3f3;;
+  border-radius: 50%;
+  border-top: 4px solid #3498db;
+  width: 35px;
+  height: 35px;
+  margin-top: 20%;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+</style>
+    
+
+</head>
+<body  >
+<center>
+
+
+
+<div class="loader">
+    
+    
+</div>
+</center>
+
+</body>
+</html>
